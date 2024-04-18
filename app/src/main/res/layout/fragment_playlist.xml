@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.PlaylistFragment"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="15dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/tvView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMusics"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tvView"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="vertical"/>
+    <LinearLayout
+        android:id="@+id/widgetView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/design_default_color_primary"
+            android:layout_gravity="center_vertical"
+            />
+        <LinearLayout
+            android:layout_weight="9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="5dp"
+            >
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="3dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:drawableEnd="@drawable/baseline_play_arrow_28"
+            android:textSize="60sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
